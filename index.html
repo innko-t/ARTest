@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <title>marker AR</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+
+  <body style="margin:0px; overflow:hidden;">
+    <a-scene embedded arjs>
+      <a-assets>
+        <!-- <a-asset-item id="ei" src="human.glb" scale="1 1 1"></a-asset-item> -->
+        <!-- <video id="wave" src="./wave.mp4" loop="true"></video> -->
+      </a-assets>
+      <a-marker preset="hiro">
+        <!-- <a-entity gltf-model="#ei" rotation="-90 0 0"></a-entity> -->
+        <a-box position="0 0.5 0" wireframe="true"></a-box>
+        <!-- <a-video src="#wave" width="8" height="4.5" position="0 3 -9"></a-video> -->
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+  <!-- <script>
+    //glTFの表示が暗くなる問題に対処
+    document.querySelector("a-scene").renderer.gammaOutput=true;
+  </script> -->
+</html>
