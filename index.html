@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
-    <title>marker AR</title>
+    <title>ARNameCard</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -23,34 +23,34 @@
       <a-marker preset="hiro">
         <a-entity cursor="rayOrigin: mouse"></a-entity>
         <!-- <a-entity camera></a-entity> -->
-        <a-cylinder position="-2 1 -1" radius="0.5" height="2" opacity="0.5" rotation="0 0 0" material="opacity: 0.0; transparent: true" 
+        <a-cylinder position="-2 1 -1.5" radius="1" height="2.5" opacity="0.5" rotation="0 0 0" material="opacity: 0.0; transparent: true" 
                     animation="property: rotation;
                     to: 0 360 0;
                     loop: true;
                     dur: 3000;
                     dir: normal;
                     startEvents:click;">
-          <a-entity gltf-model="#ei" scale="1.2 1.2 1.2" position="0 -1 0" rotation="0 0 0"></a-entity>
+          <a-entity gltf-model="#ei" scale="1.5 1.5 1.5" position="0 -1 0" rotation="0 0 0"></a-entity>
         
         </a-cylinder>
     
-        <a-text position="0 2 -1" width="10" value="Okane Takeshi" color="black" align="center"></a-text>
-        <a-text position="0 1.5 -1" width="5" value="Email: xxx@example.com" color="black" align="center"></a-text>
-        <a-text position="0 1.25 -1" width="5" value="Tel: 000-00000-0000" color="black" align="center"></a-text>
+        <a-text position="1 2.5 -1.5" width="10" value="Okane Takeshi" color="black" align="center"></a-text>
+        <a-text position="1 2 -1.5" width="5" value="Email: xxx@example.com" color="black" align="center"></a-text>
+        <a-text position="1 1.75 -1.5" width="5" value="Tel: 000-00000-0000" color="black" align="center"></a-text>
     
         <!-- <a-entity position="0 2 -5" geometry="width: 10; height: 1" text="color:black; align: center; value: Hello World; "></a-entity>
         <a-entity position="1.5 1.5 -5"  geometry="width: 5; height: 1" text="color:black; align: left; value: mail: xxx@example.com; "></a-entity>
         <a-entity position="1.5 1.25 -5"  geometry=" width: 5; height: 1" text="color:black; align: left; value: tel: 000-0000-0000; "></a-entity> -->
     
-        <a-plane position="-0.75 0.75 -1" rotation="0 0 0" width="0.5" height="0.5" color="white" twitter-panel="href: https://twitter.com/home?lang=ja">
+        <a-plane position="-0.25 0.75 -1.5" rotation="0 0 0" width="1" height="1" color="white" twitter-panel="href: https://twitter.com/home?lang=ja">
           <a-image src="#twitter" width="0.5" height="0.5"></a-image>
         </a-plane>
     
-        <a-plane position="0 0.75 -1" rotation="0 0 0" width="0.5" height="0.5" color="white" instagram-panel="href: https://www.instagram.com/">
+        <a-plane position="1 0.75 -1.5" rotation="0 0 0" width="1" height="1" color="white" instagram-panel="href: https://www.instagram.com/">
           <a-image src="#instagram" width="0.5" height="0.5"></a-image>
         </a-plane>
     
-        <a-plane position="0.75 0.75 -1" rotation="0 0 0" width="0.5" height="0.5" color="white" github-panel="href: https://github.com/">
+        <a-plane position="2.25 0.75 -1.5" rotation="0 0 0" width="1" height="1" color="white" github-panel="href: https://github.com/">
           <a-image src="#github" width="0.5" height="0.5"></a-image>
         </a-plane>
       </a-marker>
